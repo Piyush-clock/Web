@@ -17,6 +17,7 @@ const dataSets = {
 };
 
 const branchNames = [
+  "All Branches",
   "Rambaug",
   "Samrat Chowk",
   "Chakki Naka",
@@ -66,6 +67,28 @@ const branchData = (category) => {
   };
 };
 
+const overallData = (category) => {
+  if (category === "collection") {
+    return {
+      Admissions: randomValue(2800, 4200, "+"),
+      Revenue: `₹${randomValue(380, 520)}L`,
+      "V.O.A": `${randomValue(10, 18)}%`,
+    };
+  }
+  if (category === "course") {
+    return {
+      "Top Course": "Full-Stack + Cloud Track",
+      "Active Batches": randomValue(90, 140),
+      "Completion Rate": `${randomValue(91, 97)}%`,
+    };
+  }
+  return {
+    "Active Learners": randomValue(5200, 7800, "+"),
+    Assessments: `${randomValue(180, 260)} / month`,
+    "Placement Ready": `${randomValue(84, 94)}%`,
+  };
+};
+
 const renderBranches = (activeCategory) => {
   branchList.innerHTML = "";
   branchNames.forEach((branch, index) => {
@@ -89,9 +112,10 @@ const renderBranches = (activeCategory) => {
 const updateBranchDetails = (branch, category) => {
   branchDetail.classList.add("fade");
   setTimeout(() => {
-    branchDetail.querySelector("h4").textContent = `${branch} Insights`;
+    branchDetail.querySelector("h4").textContent =
+      branch === "All Branches" ? "All Branches Overview" : `${branch} Insights`;
     detailCards.innerHTML = "";
-    const metrics = branchData(category);
+    const metrics = branch === "All Branches" ? overallData(category) : branchData(category);
     Object.entries(metrics).forEach(([label, value]) => {
       const card = document.createElement("div");
       card.className = "detail-card";

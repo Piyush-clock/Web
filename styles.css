@@ -1,10 +1,10 @@
 :root {
   color-scheme: dark;
-  --bg-dark: #050b1f;
-  --bg-blue: #0c2c68;
+  --bg-dark: #030a1f;
+  --bg-blue: #0a2f7b;
   --bg-light: #eaf2ff;
-  --neon: #3aa0ff;
-  --neon-soft: rgba(58, 160, 255, 0.35);
+  --neon: #49b0ff;
+  --neon-soft: rgba(73, 176, 255, 0.4);
   --glass: rgba(255, 255, 255, 0.08);
   --border: rgba(255, 255, 255, 0.2);
   --text-primary: #f5f8ff;
@@ -18,9 +18,10 @@
 }
 
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  background: radial-gradient(circle at top, rgba(58, 160, 255, 0.25), transparent 55%),
-    linear-gradient(135deg, #050b1f 10%, #0c2c68 55%, #0b1639 100%);
+  font-family: "Sora", sans-serif;
+  background: radial-gradient(circle at top, rgba(73, 176, 255, 0.35), transparent 55%),
+    radial-gradient(circle at 20% 20%, rgba(61, 110, 255, 0.25), transparent 55%),
+    linear-gradient(135deg, #030a1f 10%, #0b327b 50%, #0a1842 100%);
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
@@ -32,10 +33,20 @@ body {
   left: 5%;
   width: 40vw;
   height: 40vw;
-  background: radial-gradient(circle, rgba(58, 160, 255, 0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(73, 176, 255, 0.5), transparent 70%);
   filter: blur(40px);
   opacity: 0.8;
   z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(73, 176, 255, 0.1), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(73, 176, 255, 0.2), transparent 55%);
+  pointer-events: none;
+  z-index: -2;
 }
 
 .hero {
@@ -74,14 +85,14 @@ body {
 }
 
 .cta {
-  background: linear-gradient(120deg, rgba(58, 160, 255, 0.9), rgba(108, 178, 255, 0.4));
+  background: linear-gradient(120deg, rgba(73, 176, 255, 0.95), rgba(108, 178, 255, 0.45));
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 10px 18px;
   border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 0 15px rgba(58, 160, 255, 0.5);
+  box-shadow: 0 0 18px rgba(73, 176, 255, 0.6);
 }
 
 .hero-content {
@@ -133,9 +144,9 @@ body {
 }
 
 .primary {
-  background: linear-gradient(135deg, #3aa0ff, #2c5bff);
+  background: linear-gradient(135deg, #49b0ff, #2f6bff);
   color: white;
-  box-shadow: 0 10px 30px rgba(58, 160, 255, 0.35);
+  box-shadow: 0 14px 34px rgba(73, 176, 255, 0.4);
 }
 
 .secondary {
@@ -147,7 +158,7 @@ body {
 .primary:hover,
 .secondary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(58, 160, 255, 0.25);
+  box-shadow: 0 14px 28px rgba(73, 176, 255, 0.35);
 }
 
 .hero-stats {
@@ -176,7 +187,7 @@ body {
   border-radius: 24px;
   border: 1px solid var(--border);
   padding: 32px;
-  box-shadow: 0 20px 40px rgba(8, 20, 45, 0.45);
+  box-shadow: 0 20px 40px rgba(8, 20, 45, 0.45), 0 0 30px rgba(73, 176, 255, 0.25);
   backdrop-filter: blur(16px);
 }
 
@@ -191,14 +202,14 @@ body {
 }
 
 .highlight-chip {
-  background: rgba(58, 160, 255, 0.15);
-  border: 1px solid rgba(58, 160, 255, 0.4);
+  background: rgba(73, 176, 255, 0.2);
+  border: 1px solid rgba(73, 176, 255, 0.5);
   color: var(--text-primary);
   padding: 8px 16px;
   border-radius: 999px;
   display: inline-block;
   margin: 20px 0;
-  box-shadow: 0 0 20px rgba(58, 160, 255, 0.4);
+  box-shadow: 0 0 24px rgba(73, 176, 255, 0.5);
 }
 
 .card-metrics {
@@ -243,7 +254,7 @@ body {
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
-  box-shadow: inset 0 0 20px rgba(58, 160, 255, 0.1);
+  box-shadow: inset 0 0 24px rgba(73, 176, 255, 0.16);
 }
 
 .info-card h3 {
@@ -265,13 +276,13 @@ body {
 .credit-card {
   padding: 28px;
   border-radius: 22px;
-  background: linear-gradient(150deg, rgba(58, 160, 255, 0.12), rgba(255, 255, 255, 0.04));
+  background: linear-gradient(150deg, rgba(73, 176, 255, 0.18), rgba(255, 255, 255, 0.04));
   border: 1px solid var(--border);
   box-shadow: 0 18px 32px rgba(9, 22, 48, 0.4);
 }
 
 .credit-card.light {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(58, 160, 255, 0.18));
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.1), rgba(73, 176, 255, 0.22));
 }
 
 .credit-list {
@@ -292,9 +303,9 @@ body {
 .branch-card {
   padding: 18px 20px;
   border-radius: 16px;
-  border: 1px solid rgba(58, 160, 255, 0.4);
+  border: 1px solid rgba(73, 176, 255, 0.5);
   background: rgba(6, 17, 40, 0.6);
-  box-shadow: 0 0 20px rgba(58, 160, 255, 0.18);
+  box-shadow: 0 0 24px rgba(73, 176, 255, 0.26);
   font-weight: 700;
 }
 
@@ -305,9 +316,9 @@ body {
 .highlight-box {
   padding: 28px 36px;
   border-radius: 18px;
-  background: rgba(58, 160, 255, 0.12);
-  border: 1px solid rgba(58, 160, 255, 0.5);
-  box-shadow: 0 0 30px rgba(58, 160, 255, 0.35);
+  background: rgba(73, 176, 255, 0.16);
+  border: 1px solid rgba(73, 176, 255, 0.55);
+  box-shadow: 0 0 34px rgba(73, 176, 255, 0.4);
   text-align: center;
   font-size: 1.1rem;
 }
@@ -345,9 +356,9 @@ body {
 
 .tab.active,
 .tab:hover {
-  background: rgba(58, 160, 255, 0.18);
-  border-color: rgba(58, 160, 255, 0.6);
-  box-shadow: 0 0 18px rgba(58, 160, 255, 0.25);
+  background: rgba(73, 176, 255, 0.22);
+  border-color: rgba(73, 176, 255, 0.65);
+  box-shadow: 0 0 20px rgba(73, 176, 255, 0.35);
 }
 
 .data-panel {
@@ -355,7 +366,7 @@ body {
   border-radius: 22px;
   border: 1px solid var(--border);
   padding: 24px;
-  box-shadow: 0 18px 32px rgba(9, 22, 48, 0.4);
+  box-shadow: 0 18px 32px rgba(9, 22, 48, 0.4), 0 0 24px rgba(73, 176, 255, 0.2);
 }
 
 .panel-header h3 {
@@ -394,8 +405,8 @@ body {
 
 .branch-list button.active,
 .branch-list button:hover {
-  border-color: rgba(58, 160, 255, 0.6);
-  background: rgba(58, 160, 255, 0.16);
+  border-color: rgba(73, 176, 255, 0.6);
+  background: rgba(73, 176, 255, 0.2);
 }
 
 .branch-detail {
@@ -422,9 +433,9 @@ body {
 .detail-card {
   padding: 14px;
   border-radius: 12px;
-  background: rgba(58, 160, 255, 0.12);
-  border: 1px solid rgba(58, 160, 255, 0.35);
-  box-shadow: inset 0 0 12px rgba(58, 160, 255, 0.15);
+  background: rgba(73, 176, 255, 0.16);
+  border: 1px solid rgba(73, 176, 255, 0.4);
+  box-shadow: inset 0 0 14px rgba(73, 176, 255, 0.2);
 }
 
 .detail-card h5 {
