@@ -62,9 +62,18 @@ body::after {
 }
 
 .logo {
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  width: clamp(190px, 24vw, 290px);
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(73, 176, 255, 0.35);
+  box-shadow: 0 8px 24px rgba(73, 176, 255, 0.25);
+  background: #ffffff;
 }
 
 .nav-links {
