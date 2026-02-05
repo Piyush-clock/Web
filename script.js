@@ -28,10 +28,13 @@ const branchNames = [
   "Thane (Lokamanya Nagar)",
   "Star Colony",
   "Tilak Chowk",
+  "Diva",
   "Vartak Nagar",
   "Devi Chowk",
   "DB Chowk",
   "Badlapur",
+  "Titwala",
+  "Panvel",
   "Kongaon 2",
 ];
 
