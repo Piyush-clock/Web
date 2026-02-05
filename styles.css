@@ -355,13 +355,23 @@ body::after {
 }
 
 .highlight-box {
-  padding: 28px 36px;
+  padding: 34px 40px;
   border-radius: 18px;
   background: rgba(73, 176, 255, 0.16);
   border: 1px solid rgba(73, 176, 255, 0.55);
-  box-shadow: 0 0 34px rgba(73, 176, 255, 0.4);
+  box-shadow: 0 0 42px rgba(73, 176, 255, 0.48);
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+}
+
+.highlight-box strong {
+  display: inline-block;
+  font-size: clamp(1.2rem, 2.4vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  text-shadow: 0 0 16px rgba(73, 176, 255, 0.75), 0 0 30px rgba(73, 176, 255, 0.45);
 }
 
 .divider {
