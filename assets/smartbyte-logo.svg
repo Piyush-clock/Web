@@ -1,0 +1,15 @@
+<svg width="800" height="220" viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f3fa6"/>
+      <stop offset="1" stop-color="#00a8ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="800" height="220" rx="18" fill="white"/>
+  <g transform="translate(24,20)">
+    <path d="M70 10C95 10 114 28 114 52C114 72 100 86 82 92C96 96 109 110 109 128C109 154 88 176 59 176C41 176 26 168 15 154L31 141C39 150 48 155 58 155C75 155 87 143 87 128C87 112 75 102 57 102H44V81H55C71 81 84 70 84 55C84 40 72 31 58 31C47 31 38 35 30 44L14 30C26 17 44 10 70 10Z" fill="url(#g1)"/>
+    <path d="M45 9C31 35 25 63 25 96C25 126 30 151 41 176H17C5 152 0 125 0 96C0 62 7 33 24 9H45Z" fill="#1f3fa6"/>
+  </g>
+  <text x="150" y="98" font-family="Sora, Arial, sans-serif" font-size="74" font-weight="700" fill="url(#g1)">SmartByte</text>
+  <text x="150" y="156" font-family="Sora, Arial, sans-serif" font-size="56" font-weight="500" fill="#1A1A1A">Computer Education</text>
+</svg>
