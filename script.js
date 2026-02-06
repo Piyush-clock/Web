@@ -1,8 +1,18 @@
 const dataSets = {
   collection: {
-    title: "Collection Admission / V.O.A",
-    summary: "Track admissions, revenue, and value of admissions across branches.",
-    metrics: ["Admissions", "Revenue", "V.O.A"],
+    title: "Collection",
+    summary: "Track Collections across branches.",
+    metrics: ["Collection"],
+  },
+    admission: {
+    title: "Admission",
+    summary: "Track admission across branches.",
+    metrics: ["Admissions"],
+  },
+    Value_Of_Admission: {
+    title: "Value Of Admission",
+    summary: "Track Value Of Admission across branches.",
+    metrics: ["V.O.A"],
   },
   course: {
     title: "Course Data",
